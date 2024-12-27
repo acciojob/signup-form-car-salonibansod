@@ -1,16 +1,116 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+        .form-container h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="date"],
+        input[type="tel"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        button[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
-
+    <div class="form-container">
+        <h2>Signup Form</h2>
+        <form action="#" method="post">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Name" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            
+            <label>Gender</label>
+            <input type="radio" id="gender_m" name="gender" value="Male" required>
+            <label for="gender_m">Male</label>
+            <input type="radio" id="gender_f" name="gender" value="Female" required>
+            <label for="gender_f">Female</label>
+            
+            <label for="cars">Car Brands</label>
+            <select id="cars" name="cars" required>
+                <option value="" disabled selected>--Please choose an option--</option>
+                <option value="toyota">Toyota</option>
+                <option value="ford">Ford</option>
+                <option value="bmw">BMW</option>
+                <option value="audi">Audi</option>
+            </select>
+            
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" placeholder="Age" required>
+            
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob" required>
+            
+            <label for="tel">Phone Number</label>
+            <input type="tel" id="tel" name="tel" placeholder="xxx-xxx-xxxx">
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            
+            <label>
+                <input type="checkbox" id="tos" name="tos" required>
+                I agree to the TOS
+            </label>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
 </body>
-
 </html>
